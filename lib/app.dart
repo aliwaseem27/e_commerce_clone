@@ -13,16 +13,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
+        fontFamily: 'Lato',
       ),
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
           title: const Text('Flutter Demo Home Page'),
         ),
-        body: const Center(
+        body: Center(
           // Center is a layout widget. It takes a single child and positions it
           // in the middle of the parent.
-          child: Text('Hello World'),
+          child: Text(
+            'Hello World',
+            style: TextStyle(fontSize: 28, fontFamily: 'Lato', fontWeight: FontWeight.w700),
+          ),
         ),
       ),
     );
