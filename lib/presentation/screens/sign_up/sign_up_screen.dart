@@ -1,3 +1,4 @@
+import 'package:e_commerce_clone/presentation/screens/sign_up/widgets/intrinsic_height_scroll_view.dart';
 import 'package:e_commerce_clone/utils/constants/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -12,10 +13,9 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      resizeToAvoidBottomInset: false,
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(AppSizes.defaultSpace),
+      body: Padding(
+        padding: const EdgeInsets.all(AppSizes.defaultSpace),
+        child: IntrinsicHeightScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
