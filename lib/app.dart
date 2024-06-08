@@ -1,4 +1,6 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:e_commerce_clone/presentation/screens/sign_up/sign_up_screen.dart';
+import 'package:e_commerce_clone/utils/themes/theme.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -10,25 +12,8 @@ class MyApp extends StatelessWidget {
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-        fontFamily: 'Lato',
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text('Flutter Demo Home Page'),
-        ),
-        body: Center(
-          // Center is a layout widget. It takes a single child and positions it
-          // in the middle of the parent.
-          child: Text(
-            'Hello World',
-            style: TextStyle(fontSize: 28, fontFamily: 'Lato', fontWeight: FontWeight.w700),
-          ),
-        ),
-      ),
+      theme: AppTheme.lightTheme,
+      home: SignUpScreen(),
     );
   }
 }
