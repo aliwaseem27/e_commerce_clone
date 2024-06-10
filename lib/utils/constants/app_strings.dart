@@ -7,6 +7,7 @@ class AppStrings {
   static const String signIn = "Sign In";
   static const String forgotPassword = "Forgot Password";
   static const String resetPassword = "Reset Password";
+  static const String otpTitle = "Enter Your OTP";
   static const String fullName = "Full Name";
   static const String emailAddress = "Email Address";
   static const String password = "Password";
@@ -21,4 +22,5 @@ class AppStrings {
   static const String dontHaveAnAccount = "Don't have an account?";
   static const String goBackTo = "Go Back To";
   static const String sendCode = "Send Code";
+  static const String verify = "Verify";
 }

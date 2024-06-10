@@ -1,5 +1,6 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:e_commerce_clone/presentation/screens/forget_password/forget_password_screen.dart';
+import 'package:e_commerce_clone/presentation/screens/otp/otp_screen.dart';
 import 'package:e_commerce_clone/presentation/screens/reset_password/reset_password_screen.dart';
 import 'package:e_commerce_clone/presentation/screens/sign_in/sign_in_screen.dart';
 import 'package:e_commerce_clone/presentation/screens/sign_up/sign_up_screen.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       title: 'Flutter Demo',
       theme: AppTheme.lightTheme,
-      home: ResetPasswordScreen(),
+      home: OTPScreen(),
     );
   }
 }
