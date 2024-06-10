@@ -16,10 +16,13 @@ class SignInScreenHeaderText extends StatelessWidget {
         children: [
           Text(AppStrings.signIn, style: Theme.of(context).textTheme.headlineMedium),
           SizedBox(height: AppSizes.spaceBtwItems),
-          Text(
-            AppStrings.placeholder,
-            style: Theme.of(context).textTheme.bodyMedium,
-            textAlign: TextAlign.center,
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.7,
+            child: Text(
+              AppStrings.placeholder,
+              style: Theme.of(context).textTheme.bodyMedium,
+              textAlign: TextAlign.center,
+            ),
           ),
         ],
       ),

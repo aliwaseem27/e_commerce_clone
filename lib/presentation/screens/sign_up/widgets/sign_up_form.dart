@@ -47,7 +47,10 @@ class SignUpForm extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {},
-                child: Text(AppStrings.signUp),
+                child: Text(
+                  AppStrings.signUp,
+                  style: TextStyle(color: Colors.white),
+                ),
               )),
         ],
       ),
