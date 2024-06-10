@@ -6,9 +6,12 @@ class AppStrings {
   static const String signUp = "Sign Up";
   static const String signIn = "Sign In";
   static const String forgotPassword = "Forgot Password";
+  static const String resetPassword = "Reset Password";
   static const String fullName = "Full Name";
   static const String emailAddress = "Email Address";
   static const String password = "Password";
+  static const String newPassword = "New Password";
+  static const String confirmPassword = "Confirm Password";
   static const String agreeTo = "I agree to the";
   static const String and = "and";
   static const String termsAndConditions = "Terms & Conditions";

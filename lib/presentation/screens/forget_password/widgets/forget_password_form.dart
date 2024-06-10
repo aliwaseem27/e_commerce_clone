@@ -19,10 +19,7 @@ class ForgetPasswordForm extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () {},
-              child: Text(
-                AppStrings.sendCode,
-                style: TextStyle(color: Colors.white),
-              ),
+              child: Text(AppStrings.sendCode),
             ),
           ),
         ],
