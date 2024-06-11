@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/app_sizes.dart';
-import '../../../utils/constants/app_strings.dart';
 
 class SpecialDivider extends StatelessWidget {
   const SpecialDivider({
@@ -14,7 +13,7 @@ class SpecialDivider extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Flexible(
+        const Flexible(
           child: Divider(
             thickness: 1,
             // indent: AppSizes.xl,
@@ -22,7 +21,7 @@ class SpecialDivider extends StatelessWidget {
           ),
         ),
         Text(dividerText.toUpperCase()),
-        Flexible(
+        const Flexible(
           child: Divider(
             thickness: 1,
             indent: AppSizes.sm,

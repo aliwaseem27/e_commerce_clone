@@ -1,23 +1,22 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:e_commerce_clone/presentation/screens/forget_password/forget_password_screen.dart';
-import 'package:e_commerce_clone/presentation/screens/otp/otp_screen.dart';
-import 'package:e_commerce_clone/presentation/screens/reset_password/reset_password_screen.dart';
-import 'package:e_commerce_clone/presentation/screens/sign_in/sign_in_screen.dart';
-import 'package:e_commerce_clone/presentation/screens/sign_up/sign_up_screen.dart';
+import 'package:e_commerce_clone/presentation/screens/authentication/otp/otp_screen.dart';
+import 'package:e_commerce_clone/presentation/screens/core/app_router.dart';
 import 'package:e_commerce_clone/utils/themes/theme.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   MyApp({super.key});
+
+  final _appRouter = AppRouter();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       title: 'Flutter Demo',
       theme: AppTheme.lightTheme,
-      home: OTPScreen(),
+      routerConfig: _appRouter.config(),
     );
   }
 }

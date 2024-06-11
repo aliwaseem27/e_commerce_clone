@@ -19,22 +19,22 @@ class SocialButtons extends StatelessWidget {
             decoration: BoxDecoration(
                 color: AppColors.neutralColor,
                 borderRadius: BorderRadius.circular(AppSizes.borderRadiusSm)),
-            padding: EdgeInsets.symmetric(vertical: AppSizes.xs, horizontal: AppSizes.sm),
-            child: Icon(
+            padding: const EdgeInsets.symmetric(vertical: AppSizes.xs, horizontal: AppSizes.sm),
+            child: const Icon(
               Icons.facebook,
               color: AppColors.primaryColor,
             ),
           ),
         ),
-        SizedBox(width: AppSizes.spaceBtwItems),
+        const SizedBox(width: AppSizes.spaceBtwItems),
         InkWell(
           onTap: () {},
           child: Container(
             decoration: BoxDecoration(
                 color: AppColors.neutralColor,
                 borderRadius: BorderRadius.circular(AppSizes.borderRadiusSm)),
-            padding: EdgeInsets.symmetric(vertical: AppSizes.xs, horizontal: AppSizes.sm),
-            child: Icon(
+            padding: const EdgeInsets.symmetric(vertical: AppSizes.xs, horizontal: AppSizes.sm),
+            child: const Icon(
               Icons.facebook,
               color: AppColors.primaryColor,
             ),
