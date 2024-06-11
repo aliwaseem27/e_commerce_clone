@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:e_commerce_clone/presentation/common/widgets/intrinsic_height_scroll_view.dart';
 import 'package:e_commerce_clone/utils/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +10,7 @@ import 'widgets/dont_have_account.dart';
 import 'widgets/sign_in_form.dart';
 import 'widgets/sign_in_header_text.dart';
 
+@RoutePage()
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
 

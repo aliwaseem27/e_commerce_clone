@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:e_commerce_clone/presentation/common/widgets/intrinsic_height_scroll_view.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,7 @@ import 'widgets/have_account_action.dart';
 import 'widgets/sign_up_form.dart';
 import 'widgets/sign_up_header_text.dart';
 
+@RoutePage()
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 

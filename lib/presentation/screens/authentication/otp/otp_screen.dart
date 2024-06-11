@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../utils/constants/app_sizes.dart';
@@ -5,6 +6,7 @@ import '../../../common/widgets/intrinsic_height_scroll_view.dart';
 import 'widgets/otp_form.dart';
 import 'widgets/otp_screen_header_text.dart';
 
+@RoutePage()
 class OTPScreen extends StatelessWidget {
   const OTPScreen({super.key});
 

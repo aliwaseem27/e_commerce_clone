@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../utils/constants/app_sizes.dart';
@@ -6,6 +7,7 @@ import 'widgets/forget_password_form.dart';
 import 'widgets/forget_password_header_text.dart';
 import 'widgets/goback_to_sign_in_action.dart';
 
+@RoutePage()
 class ForgetPasswordScreen extends StatelessWidget {
   const ForgetPasswordScreen({super.key});
 

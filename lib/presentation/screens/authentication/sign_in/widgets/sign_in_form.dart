@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:e_commerce_clone/presentation/screens/core/app_router.dart';
+import 'package:e_commerce_clone/presentation/screens/core/navigation_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/constants/app_sizes.dart';
 import '../../../../../utils/constants/app_strings.dart';
-
 
 class SignInForm extends StatelessWidget {
   const SignInForm({
@@ -34,19 +36,20 @@ class SignInForm extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               TextButton(
-                onPressed: () {},
+                onPressed: () => context.router.push(const ForgetPasswordRoute()),
                 child: Text(AppStrings.forgotPassword),
               ),
             ],
           ),
 
-          // Sign up button
+          // Sign in button
           SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text(AppStrings.signIn),
-              )),
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () => context.router.replace(const NavigationRoute()),
+              child: const Text(AppStrings.signIn),
+            ),
+          ),
         ],
       ),
     );
