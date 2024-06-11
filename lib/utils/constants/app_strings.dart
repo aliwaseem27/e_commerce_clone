@@ -23,4 +23,14 @@ class AppStrings {
   static const String goBackTo = "Go Back To";
   static const String sendCode = "Send Code";
   static const String verify = "Verify";
+
+  // Profile Screen
+  static const String myAccount = "My Account";
+  static const String paymentMethod = "Payment Method";
+  static const String myOrders = "My Orders";
+  static const String settings = "Settings";
+  static const String helpCenter = "Help Center";
+  static const String privacyPolicy = "Privacy Policy";
+  static const String inviteFriends = "Invite Friends";
+  static const String signOut = "Sign Out";
 }
