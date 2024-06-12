@@ -16,23 +16,23 @@ class AppTextFieldFormTheme {
     floatingLabelStyle: const TextStyle().copyWith(color: AppColors.neutralDarkColor.withOpacity(0.8)),
     border: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
-      borderSide: const BorderSide(width: 1, color: AppColors.neutralColor),
+      borderSide: const BorderSide(width: 1, color: Colors.transparent),
     ),
     enabledBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
-      borderSide: const BorderSide(width: 1, color: AppColors.neutralColor),
+      borderSide: const BorderSide(width: 1, color:Colors.transparent),
     ),
     focusedBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
-      borderSide: const BorderSide(width: 1, color: AppColors.neutralDarkColor),
+      borderSide: const BorderSide(width: 1, color: Colors.transparent),
     ),
     errorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
-      borderSide: const BorderSide(width: 1, color: AppColors.warning),
+      borderSide: const BorderSide(width: 1, color:Colors.transparent),
     ),
     focusedErrorBorder: const OutlineInputBorder().copyWith(
       borderRadius: BorderRadius.circular(AppSizes.inputFieldRadius),
-      borderSide: const BorderSide(width: 2, color: AppColors.warning),
+      borderSide: const BorderSide(width: 2, color: Colors.transparent),
     ),
   );
 }
