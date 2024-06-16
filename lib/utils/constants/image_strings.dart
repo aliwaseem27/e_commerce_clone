@@ -4,6 +4,16 @@ class ImageStrings {
   // -- Drawings
   static const String inviteFriends = "assets/images/drawings/undraw_conversation_re_c26v.svg";
 
+  // -- Banners
+  static const String banner1 = "assets/images/banners/banner_1.jpg";
+  static const String banner2 = "assets/images/banners/banner_2.jpg";
+  static const String banner3 = "assets/images/banners/banner_3.jpg";
+  static const String banner4 = "assets/images/banners/banner_4.jpg";
+  static const String banner5 = "assets/images/banners/banner_5.jpg";
+  static const String banner6 = "assets/images/banners/banner_6.jpg";
+  static const String banner7 = "assets/images/banners/banner_7.jpg";
+  static const String banner8 = "assets/images/banners/banner_8.jpg";
+
   // -- Categories
   static const String sportIcon = "assets/images/categories/icons8-bowling-64.png";
   static const String clothIcon = "assets/images/categories/icons8-tailors-dummy-64.png";

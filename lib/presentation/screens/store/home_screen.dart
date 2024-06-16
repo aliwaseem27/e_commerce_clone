@@ -4,19 +4,16 @@ import 'package:e_commerce_clone/utils/constants/app_colors.dart';
 import 'package:e_commerce_clone/utils/constants/app_sizes.dart';
 import 'package:e_commerce_clone/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../common/widgets/filters_list.dart';
 import '../../common/widgets/grid_layout_four_elements.dart';
 import '../../common/widgets/section_title.dart';
-import 'widgets/category_vertical_widget.dart';
-import '../../common/widgets/filter_list_item.dart';
 import 'widgets/home_screen_categories.dart';
 import 'widgets/home_screen_header.dart';
 import 'widgets/home_search_bar.dart';
 import 'widgets/invide_friends_code_slider.dart';
 import 'widgets/product_vertical_card.dart';
+import 'widgets/promo_banners_slider.dart';
 
 @RoutePage()
 class HomeScreen extends StatelessWidget {
@@ -37,6 +34,17 @@ class HomeScreen extends StatelessWidget {
     ];
 
     final List<String> forYouTitles = ["All", "Popular", "Newest", "Most Sell", "Lowest Price", "Trending"];
+
+    final List<String> banners = [
+      ImageStrings.banner1,
+      ImageStrings.banner2,
+      ImageStrings.banner3,
+      ImageStrings.banner4,
+      ImageStrings.banner5,
+      ImageStrings.banner6,
+      ImageStrings.banner7,
+      ImageStrings.banner8,
+    ];
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.only(
@@ -53,11 +61,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: AppSizes.spaceBtwItems),
 
               // Promo Banners
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: 150,
-                color: AppColors.primaryColor,
-              ),
+              PromoSlider(banners: banners),
 
               SizedBox(height: AppSizes.spaceBtwItems),
 

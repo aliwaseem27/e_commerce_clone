@@ -15,7 +15,7 @@ class InviteFriendsCodeSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider.builder(
       itemCount: 3,
-      itemBuilder: (context, index, pageIndex) {
+      itemBuilder: (context, index, realIndex) {
         return Container(
           padding: EdgeInsets.all(AppSizes.defaultSpace),
           margin: EdgeInsets.symmetric(horizontal: AppSizes.sm),

@@ -36,7 +36,7 @@ flutter:
     - assets/images/categories/
     - assets/images/products/
     - assets/images/drawings/
-  #   - images/a_dot_ham.jpeg
+    - assets/images/banners/
 
   fonts:
     - family: Lato
