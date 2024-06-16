@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../utils/constants/app_colors.dart';
-import '../../../../utils/constants/app_sizes.dart';
+import '../../../utils/constants/app_colors.dart';
+import '../../../utils/constants/app_sizes.dart';
 
 class FilterListItem extends StatelessWidget {
   const FilterListItem({

@@ -31,7 +31,8 @@ class NavigationScreen extends StatelessWidget {
             child: Container(
               clipBehavior: Clip.hardEdge,
               height: 72,
-              margin: EdgeInsets.all(AppSizes.defaultSpace),
+              margin: EdgeInsets.only(
+                  left: AppSizes.defaultSpace, right: AppSizes.defaultSpace, bottom: AppSizes.defaultSpace),
               decoration: BoxDecoration(
                   color: Colors.red,
                   borderRadius: BorderRadius.circular(AppSizes.borderRadiusLg),

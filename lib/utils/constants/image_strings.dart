@@ -1,6 +1,9 @@
 class ImageStrings {
   static const String profileImage = "assets/images/me.jpg";
 
+  // -- Drawings
+  static const String inviteFriends = "assets/images/drawings/undraw_conversation_re_c26v.svg";
+
   // -- Categories
   static const String sportIcon = "assets/images/categories/icons8-bowling-64.png";
   static const String clothIcon = "assets/images/categories/icons8-tailors-dummy-64.png";
