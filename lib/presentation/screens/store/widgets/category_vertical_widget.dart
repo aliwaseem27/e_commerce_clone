@@ -15,37 +15,34 @@ class CategoryVerticalWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(right: AppSizes.spaceBtwItems),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            width: 64,
-            height: 64,
-            padding: const EdgeInsets.all(AppSizes.md),
-            decoration: BoxDecoration(
-              color: AppColors.secondaryColor,
-              borderRadius: BorderRadius.circular(100),
-            ),
-            child: Image(
-              image: AssetImage(image),
-              fit: BoxFit.cover,
-              color: AppColors.primaryColor,
-            ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Container(
+          width: 64,
+          height: 64,
+          padding: const EdgeInsets.all(AppSizes.md),
+          decoration: BoxDecoration(
+            color: AppColors.secondaryColor,
+            borderRadius: BorderRadius.circular(100),
           ),
-          SizedBox(
-            width: 64,
-            child: Text(
-              title,
-              style: Theme.of(context).textTheme.labelLarge,
-              overflow: TextOverflow.ellipsis,
-              maxLines: 1,
-              textAlign: TextAlign.center,
-            ),
+          child: Image(
+            image: AssetImage(image),
+            fit: BoxFit.cover,
+            color: AppColors.primaryColor,
           ),
-        ],
-      ),
+        ),
+        SizedBox(
+          width: 64,
+          child: Text(
+            title,
+            style: Theme.of(context).textTheme.labelLarge,
+            overflow: TextOverflow.ellipsis,
+            maxLines: 1,
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ],
     );
   }
 }
