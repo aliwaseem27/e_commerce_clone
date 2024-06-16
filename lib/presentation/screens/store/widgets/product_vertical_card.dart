@@ -49,9 +49,11 @@ class ProductVerticalCard extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "\$800.00",
-                    style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                  Expanded(
+                    child: Text(
+                      "\$800",
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                    ),
                   ),
                   CircleAvatar(
                     radius: 16,

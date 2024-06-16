@@ -1,5 +1,9 @@
 import 'package:auto_route/annotations.dart';
+import 'package:e_commerce_clone/presentation/common/widgets/grid_layout_four_elements.dart';
+import 'package:e_commerce_clone/presentation/screens/store/widgets/product_vertical_card.dart';
 import 'package:flutter/material.dart';
+
+import '../../../utils/constants/app_sizes.dart';
 
 @RoutePage()
 class WishlistScreen extends StatelessWidget {
@@ -7,8 +11,24 @@ class WishlistScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Wishlist"),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Wishlist"),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.only(
+              left: AppSizes.defaultSpace,
+              right: AppSizes.defaultSpace,
+              top: AppSizes.defaultSpace,
+              bottom: AppSizes.sm),
+          child: SingleChildScrollView(
+            child: GridLayoutFourElements(
+              element: ProductVerticalCard(),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

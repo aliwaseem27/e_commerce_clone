@@ -1,6 +1,4 @@
 import 'package:auto_route/annotations.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:e_commerce_clone/utils/constants/app_colors.dart';
 import 'package:e_commerce_clone/utils/constants/app_sizes.dart';
 import 'package:e_commerce_clone/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';

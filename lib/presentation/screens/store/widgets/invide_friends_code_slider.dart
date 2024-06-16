@@ -16,84 +16,88 @@ class InviteFriendsCodeSlider extends StatelessWidget {
     return CarouselSlider.builder(
       itemCount: 3,
       itemBuilder: (context, index, realIndex) {
-        return Container(
-          padding: EdgeInsets.all(AppSizes.defaultSpace),
-          margin: EdgeInsets.symmetric(horizontal: AppSizes.sm),
-          decoration: BoxDecoration(
-            color: AppColors.secondaryColor,
-            borderRadius: BorderRadius.circular(AppSizes.borderRadiusMd),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SvgPicture.asset(
-                ImageStrings.inviteFriends,
-                width: 128,
-                height: 128,
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Invite On Ride",
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    "Share this code with friends and Family members to get more offers.",
-                    style: Theme.of(context).textTheme.bodyMedium?.apply(color: AppColors.neutralColor),
-                  ),
-                  SizedBox(height: AppSizes.spaceBtwItems),
-                  Text(
-                    "Share this code:",
-                    style: Theme.of(context).textTheme.bodyMedium?.apply(color: AppColors.neutralColor),
-                  ),
-                  SizedBox(
-                    height: 40,
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        fillColor: Colors.white,
-                        filled: true,
-                        hintText: "N2X1Y",
-                        suffixIcon: Icon(Icons.copy),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: AppSizes.spaceBtwItems),
-                  Row(
+        return Card(
+          color: AppColors.secondaryColor,
+          child: Container(
+            padding: EdgeInsets.all(AppSizes.defaultSpace),
+            // margin: EdgeInsets.symmetric(horizontal: AppSizes.sm),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(AppSizes.borderRadiusMd),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SvgPicture.asset(
+                  ImageStrings.inviteFriends,
+                  width: 128,
+                  height: 128,
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Expanded(
-                        child: SizedBox(
-                          height: 40,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
-                            child: Text(
-                              "Invite",
-                              style: TextStyle(color: Colors.black),
+                      Text(
+                        "Invite On Ride",
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "Share this code with friends and Family members to get more offers.",
+                        style: Theme.of(context).textTheme.bodyMedium?.apply(color: AppColors.neutralColor),
+                      ),
+                      SizedBox(height: AppSizes.spaceBtwItems),
+                      Text(
+                        "Share this code:",
+                        style: Theme.of(context).textTheme.bodyMedium?.apply(color: AppColors.neutralColor),
+                      ),
+                      SizedBox(
+                        height: 40,
+                        child: TextFormField(
+                          decoration: InputDecoration(
+                            fillColor: Colors.white,
+                            filled: true,
+                            hintText: "N2X1Y",
+                            suffixIcon: Icon(Icons.copy),
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: AppSizes.spaceBtwItems),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: SizedBox(
+                              height: 40,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
+                                child: Text(
+                                  "Invite",
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ),
                             ),
                           ),
-                        ),
-                      ),
-                      SizedBox(width: AppSizes.spaceBtwItems),
-                      Expanded(
-                        child: SizedBox(
-                          height: 40,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: Text("Details"),
+                          SizedBox(width: AppSizes.spaceBtwItems),
+                          Expanded(
+                            child: SizedBox(
+                              height: 40,
+                              child: ElevatedButton(
+                                onPressed: () {},
+                                child: Text("Details"),
+                              ),
+                            ),
                           ),
-                        ),
-                      ),
+                        ],
+                      )
                     ],
-                  )
-                ],
-              ),
-            ],
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },
       options: CarouselOptions(
-        height: 380,
+        height: 400,
         viewportFraction: 0.9,
         enableInfiniteScroll: false,
         // enlargeCenterPage: true,
