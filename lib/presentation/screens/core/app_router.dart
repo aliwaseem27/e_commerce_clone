@@ -26,7 +26,7 @@ class AppRouter extends _$AppRouter {
           initial: true,
           children: [
             AutoRoute(page: HomeRoute.page),
-            AutoRoute(page: CartRoute.page),
+            AutoRoute(page: CartRoute.page, initial: true),
             AutoRoute(page: WishlistRoute.page),
             AutoRoute(page: ChatRoute.page),
             AutoRoute(page: ProfileRoute.page),
