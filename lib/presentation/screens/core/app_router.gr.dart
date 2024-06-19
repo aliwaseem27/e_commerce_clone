@@ -27,6 +27,14 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const ChatScreen(),
       );
     },
+    CheckoutRoute.name: (routeData) {
+      final args = routeData.argsAs<CheckoutRouteArgs>(
+          orElse: () => const CheckoutRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: CheckoutScreen(key: args.key),
+      );
+    },
     ForgetPasswordRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -110,6 +118,35 @@ class ChatRoute extends PageRouteInfo<void> {
   static const String name = 'ChatRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CheckoutScreen]
+class CheckoutRoute extends PageRouteInfo<CheckoutRouteArgs> {
+  CheckoutRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          CheckoutRoute.name,
+          args: CheckoutRouteArgs(key: key),
+          initialChildren: children,
+        );
+
+  static const String name = 'CheckoutRoute';
+
+  static const PageInfo<CheckoutRouteArgs> page =
+      PageInfo<CheckoutRouteArgs>(name);
+}
+
+class CheckoutRouteArgs {
+  const CheckoutRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'CheckoutRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for

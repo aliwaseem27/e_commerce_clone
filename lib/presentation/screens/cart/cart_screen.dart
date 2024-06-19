@@ -1,4 +1,6 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:e_commerce_clone/presentation/screens/core/app_router.dart';
 import 'package:e_commerce_clone/utils/constants/image_strings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -129,7 +131,7 @@ class _CartScreenState extends State<CartScreen> {
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () => context.router.push(CheckoutRoute()),
                       child: const Text("Checkout"),
                     ),
                   ),
