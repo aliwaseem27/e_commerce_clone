@@ -19,6 +19,39 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
+  final List<Map<String, String>> products = [
+    {
+      "name": "Sport Shoes",
+      "image": ImageStrings.productImage1,
+      "category": "Clothing",
+    },
+    {
+      "name": "Black Jacket",
+      "image": ImageStrings.productImage3,
+      "category": "Clothing",
+    },
+    {
+      "name": "Cricket Bat",
+      "image": ImageStrings.productImage30,
+      "category": "Sports",
+    },
+    {
+      "name": "Office Chair",
+      "image": ImageStrings.productImage40,
+      "category": "Furniture",
+    },
+    {
+      "name": "Bedroom Lamb",
+      "image": ImageStrings.productImage33,
+      "category": "Furniture",
+    },
+    {
+      "name": "Full Size Bed",
+      "image": ImageStrings.productImage32,
+      "category": "Furniture",
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -38,7 +71,7 @@ class _CartScreenState extends State<CartScreen> {
                 key: UniqueKey(),
                 physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
-                itemCount: 7,
+                itemCount: products.length,
                 itemBuilder: (context, index) {
                   return Slidable(
                     key: UniqueKey(),
@@ -48,11 +81,9 @@ class _CartScreenState extends State<CartScreen> {
                       dismissible: DismissiblePane(
                         closeOnCancel: true,
                         onDismissed: () {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text('Delete'),
-                            ),
-                          );
+                          setState(() {
+                            products.removeAt(index);
+                          });
                         },
                       ),
                       dragDismissible: true,
@@ -70,7 +101,11 @@ class _CartScreenState extends State<CartScreen> {
                         ),
                       ],
                     ),
-                    child: const HorizontalProductCard(),
+                    child: HorizontalProductCard(
+                      productName: products[index]["name"]!,
+                      productImage: products[index]["image"]!,
+                      productCategory: products[index]["category"]!,
+                    ),
                   );
                 },
                 separatorBuilder: (context, index) {
@@ -119,7 +154,14 @@ class DeleteCustomSliderAction extends StatelessWidget {
 class HorizontalProductCard extends StatelessWidget {
   const HorizontalProductCard({
     super.key,
+    required this.productName,
+    required this.productImage,
+    required this.productCategory,
   });
+
+  final String productName;
+  final String productImage;
+  final String productCategory;
 
   @override
   Widget build(BuildContext context) {
@@ -134,9 +176,12 @@ class HorizontalProductCard extends StatelessWidget {
           // Product Image
           Expanded(
             flex: 2,
-            child: Container(
-              margin: EdgeInsets.only(right: AppSizes.spaceBtwItems),
-              child: Image.asset(ImageStrings.productImage6),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+                margin: EdgeInsets.only(right: AppSizes.spaceBtwItems),
+                child: Image.asset(productImage),
+              ),
             ),
           ),
 
@@ -148,7 +193,7 @@ class HorizontalProductCard extends StatelessWidget {
               children: [
                 // Product Name
                 Text(
-                  "Black T-Shirt",
+                  productName,
                   style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold),
                 ),
 
@@ -160,7 +205,7 @@ class HorizontalProductCard extends StatelessWidget {
 
                 // Product Category
                 Text(
-                  "Electronics",
+                  productCategory,
                   style: Theme.of(context).textTheme.bodySmall?.apply(color: AppColors.neutralColor),
                 ),
 
