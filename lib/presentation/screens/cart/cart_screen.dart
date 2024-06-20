@@ -60,6 +60,8 @@ class _CartScreenState extends State<CartScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          surfaceTintColor: Colors.transparent,
+          scrolledUnderElevation: 0,
           title: const Text("My Cart"),
         ),
         body: Padding(

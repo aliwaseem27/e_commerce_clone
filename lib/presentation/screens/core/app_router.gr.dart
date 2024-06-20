@@ -71,6 +71,14 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const ResetPasswordScreen(),
       );
     },
+    ShippingAddressRoute.name: (routeData) {
+      final args = routeData.argsAs<ShippingAddressRouteArgs>(
+          orElse: () => const ShippingAddressRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: ShippingAddressScreen(key: args.key),
+      );
+    },
     SignInRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -231,6 +239,35 @@ class ResetPasswordRoute extends PageRouteInfo<void> {
   static const String name = 'ResetPasswordRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ShippingAddressScreen]
+class ShippingAddressRoute extends PageRouteInfo<ShippingAddressRouteArgs> {
+  ShippingAddressRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          ShippingAddressRoute.name,
+          args: ShippingAddressRouteArgs(key: key),
+          initialChildren: children,
+        );
+
+  static const String name = 'ShippingAddressRoute';
+
+  static const PageInfo<ShippingAddressRouteArgs> page =
+      PageInfo<ShippingAddressRouteArgs>(name);
+}
+
+class ShippingAddressRouteArgs {
+  const ShippingAddressRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'ShippingAddressRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for
