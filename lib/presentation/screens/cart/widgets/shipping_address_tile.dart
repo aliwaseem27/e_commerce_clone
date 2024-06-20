@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../utils/constants/app_colors.dart';
 import '../../../../utils/constants/app_sizes.dart';
 
-class ShippingAddressTile extends StatelessWidget {
-  const ShippingAddressTile({
+class CustomRadioListTile extends StatelessWidget {
+  const CustomRadioListTile({
     super.key,
     required this.title,
     required this.subtitle,

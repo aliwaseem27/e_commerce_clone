@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    AddCardRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const AddCardScreen(),
+      );
+    },
     CartRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -59,6 +65,14 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const OTPScreen(),
       );
     },
+    PaymentOptionsRoute.name: (routeData) {
+      final args = routeData.argsAs<PaymentOptionsRouteArgs>(
+          orElse: () => const PaymentOptionsRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: PaymentOptionsScreen(key: args.key),
+      );
+    },
     ProfileRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -98,6 +112,20 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [AddCardScreen]
+class AddCardRoute extends PageRouteInfo<void> {
+  const AddCardRoute({List<PageRouteInfo>? children})
+      : super(
+          AddCardRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AddCardRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -211,6 +239,35 @@ class OTPRoute extends PageRouteInfo<void> {
   static const String name = 'OTPRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [PaymentOptionsScreen]
+class PaymentOptionsRoute extends PageRouteInfo<PaymentOptionsRouteArgs> {
+  PaymentOptionsRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          PaymentOptionsRoute.name,
+          args: PaymentOptionsRouteArgs(key: key),
+          initialChildren: children,
+        );
+
+  static const String name = 'PaymentOptionsRoute';
+
+  static const PageInfo<PaymentOptionsRouteArgs> page =
+      PageInfo<PaymentOptionsRouteArgs>(name);
+}
+
+class PaymentOptionsRouteArgs {
+  const PaymentOptionsRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'PaymentOptionsRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for

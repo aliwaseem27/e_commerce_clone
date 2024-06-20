@@ -1,31 +1,35 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../utils/constants/app_colors.dart';
 import '../../../utils/constants/app_sizes.dart';
 import 'widgets/shipping_address_tile.dart';
 
 @RoutePage()
-class ShippingAddressScreen extends StatefulWidget {
-  ShippingAddressScreen({super.key});
+class PaymentOptionsScreen extends StatefulWidget {
+  PaymentOptionsScreen({super.key});
 
   @override
-  State<ShippingAddressScreen> createState() => _ShippingAddressScreenState();
+  State<PaymentOptionsScreen> createState() => _PaymentOptionsScreenState();
 }
 
-class _ShippingAddressScreenState extends State<ShippingAddressScreen> {
-  final List<Map<String, String>> addresses = [
+class _PaymentOptionsScreenState extends State<PaymentOptionsScreen> {
+  final List<Map<String, dynamic>> addresses = [
     {
-      "title": "Home",
-      "subtitle": "123 Main St, Anytown, USA",
+      "title": "Cash On Delivery",
+      "subtitle": "Lorem Ipsum is simply",
+      "leadingIcon": FontAwesomeIcons.handHoldingDollar,
     },
     {
-      "title": "Office",
-      "subtitle": "456 Market St, Anytown, USA",
+      "title": "MasterCard",
+      "subtitle": "Lorem Ipsum is simply",
+      "leadingIcon": FontAwesomeIcons.ccMastercard,
     },
     {
-      "title": "Friends House",
-      "subtitle": "789 Other St, Anytown, USA",
+      "title": "Discover",
+      "subtitle": "Lorem Ipsum is simply",
+      "leadingIcon": FontAwesomeIcons.creditCard,
     },
   ];
 
@@ -35,7 +39,7 @@ class _ShippingAddressScreenState extends State<ShippingAddressScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Shipping Address"),
+        title: Text("Payment Method"),
         centerTitle: true,
         surfaceTintColor: Colors.transparent,
         scrolledUnderElevation: 0,
@@ -52,7 +56,7 @@ class _ShippingAddressScreenState extends State<ShippingAddressScreen> {
                   children: [
                     // Title
                     Text(
-                      "Shipping Address",
+                      "Payment Option",
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: AppSizes.spaceBtwItems),
@@ -66,7 +70,7 @@ class _ShippingAddressScreenState extends State<ShippingAddressScreen> {
                         return CustomRadioListTile(
                           title: addresses[index]["title"]!,
                           subtitle: addresses[index]["subtitle"]!,
-                          leadingIcon: Icons.location_on,
+                          leadingIcon: addresses[index]["leadingIcon"]!,
                           selected: selectedAddress == index,
                           onTap: () {
                             setState(() {
@@ -95,7 +99,7 @@ class _ShippingAddressScreenState extends State<ShippingAddressScreen> {
                           children: [
                             Icon(Icons.add),
                             SizedBox(width: AppSizes.spaceBtwItems),
-                            Text("Add New Address"),
+                            Text("Add New Card"),
                           ],
                         ),
                       ),

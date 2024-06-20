@@ -1,5 +1,7 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:e_commerce_clone/presentation/screens/cart/widgets/total_price_group.dart';
+import 'package:e_commerce_clone/presentation/screens/core/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -79,6 +81,7 @@ class CheckoutScreen extends StatelessWidget {
                 title: "Home",
                 subtitle: "Lorem Ipsum is simply",
                 leadingIcon: Icons.home_filled,
+                onTap: () => context.router.push(ShippingAddressRoute()),
               ),
 
               // Payment method
@@ -92,6 +95,7 @@ class CheckoutScreen extends StatelessWidget {
                 title: "Cash On Delivery",
                 subtitle: "Lorem Ipsum is simply",
                 leadingIcon: FontAwesomeIcons.handHoldingDollar,
+                onTap: () => context.router.push(PaymentOptionsRoute()),
               ),
 
               // Shipping Type

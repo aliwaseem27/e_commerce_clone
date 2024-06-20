@@ -6,8 +6,10 @@ import '../authentication/otp/otp_screen.dart';
 import '../authentication/reset_password/reset_password_screen.dart';
 import '../authentication/sign_in/sign_in_screen.dart';
 import '../authentication/sign_up/sign_up_screen.dart';
+import '../cart/add_card_screen.dart';
 import '../cart/cart_screen.dart';
 import '../cart/checkout_screen.dart';
+import '../cart/payment_options_screen.dart';
 import '../cart/shipping_address.dart';
 import '../chat/chat_screen.dart';
 import '../profile/profile_screen.dart';
@@ -25,7 +27,9 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: SignUpRoute.page),
         AutoRoute(page: ForgetPasswordRoute.page),
         AutoRoute(page: CheckoutRoute.page),
-        AutoRoute(page: ShippingAddressRoute.page, initial: true),
+        AutoRoute(page: ShippingAddressRoute.page),
+        AutoRoute(page: PaymentOptionsRoute.page),
+        AutoRoute(page: AddCardRoute.page, initial: true),
         AutoRoute(
           page: NavigationRoute.page,
           // initial: true,
