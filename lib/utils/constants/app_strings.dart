@@ -33,4 +33,11 @@ class AppStrings {
   static const String privacyPolicy = "Privacy Policy";
   static const String inviteFriends = "Invite Friends";
   static const String signOut = "Sign Out";
+
+  //Card Screen
+  static const String cardHolderName = "Card Holder Name";
+  static const String cardNumber = "Card Number";
+  static const String expirayDate = "Expiry Date";
+  static const String cvvCode = "CVV";
+
 }

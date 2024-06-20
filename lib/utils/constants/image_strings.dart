@@ -1,6 +1,9 @@
 class ImageStrings {
   static const String profileImage = "assets/images/me.jpg";
 
+  // -- Logo
+  static const String masterCardLogo = "assets/images/logos/mc_symbol_opt_45_2x.png";
+
   // -- Drawings
   static const String inviteFriends = "assets/images/drawings/undraw_conversation_re_c26v.svg";
 
@@ -102,5 +105,5 @@ class ImageStrings {
   static const String productImage74 = "assets/images/products/slipper-product-1.png";
   static const String productImage75 = "assets/images/products/slipper-product-2.png";
   static const String productImage76 = "assets/images/products/slipper-product-3.png";
-  static const String productImage77= "assets/images/products/slipper-product.png";
+  static const String productImage77 = "assets/images/products/slipper-product.png";
 }

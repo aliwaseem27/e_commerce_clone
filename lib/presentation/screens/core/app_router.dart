@@ -29,7 +29,7 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: CheckoutRoute.page),
         AutoRoute(page: ShippingAddressRoute.page),
         AutoRoute(page: PaymentOptionsRoute.page),
-        AutoRoute(page: AddCardRoute.page, initial: true),
+        AutoRoute(page: AddCardRoute.page,initial: true),
         AutoRoute(
           page: NavigationRoute.page,
           // initial: true,

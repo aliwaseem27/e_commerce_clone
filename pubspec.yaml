@@ -38,6 +38,7 @@ flutter:
     - assets/images/products/
     - assets/images/drawings/
     - assets/images/banners/
+    - assets/images/logos/
 
   fonts:
     - family: Lato
