@@ -1,3 +1,4 @@
+import 'package:e_commerce_clone/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/app_colors.dart';
@@ -17,12 +18,17 @@ class SocialButtons extends StatelessWidget {
           onTap: () {},
           child: Container(
             decoration: BoxDecoration(
-                color: AppColors.neutralColor,
-                borderRadius: BorderRadius.circular(AppSizes.borderRadiusSm)),
-            padding: const EdgeInsets.symmetric(vertical: AppSizes.xs, horizontal: AppSizes.sm),
-            child: const Icon(
-              Icons.facebook,
-              color: AppColors.primaryColor,
+              color: AppColors.secondaryColor,
+              borderRadius: BorderRadius.circular(AppSizes.borderRadiusSm),
+            ),
+            padding: const EdgeInsets.symmetric(
+              vertical: AppSizes.xs,
+              horizontal: AppSizes.sm,
+            ),
+            child: SizedBox(
+              height: 32,
+              width: 32,
+              child: Image.asset(ImageStrings.facebookLogo),
             ),
           ),
         ),
@@ -31,12 +37,14 @@ class SocialButtons extends StatelessWidget {
           onTap: () {},
           child: Container(
             decoration: BoxDecoration(
-                color: AppColors.neutralColor,
-                borderRadius: BorderRadius.circular(AppSizes.borderRadiusSm)),
-            padding: const EdgeInsets.symmetric(vertical: AppSizes.xs, horizontal: AppSizes.sm),
-            child: const Icon(
-              Icons.facebook,
-              color: AppColors.primaryColor,
+              color: AppColors.secondaryColor,
+              borderRadius: BorderRadius.circular(AppSizes.borderRadiusSm),
+            ),
+            padding: const EdgeInsets.symmetric(vertical: AppSizes.sm, horizontal: AppSizes.md),
+            child: SizedBox(
+              height: 32,
+              width: 32,
+              child: Image.asset(ImageStrings.googleLogo),
             ),
           ),
         ),

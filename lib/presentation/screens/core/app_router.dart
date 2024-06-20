@@ -24,12 +24,12 @@ class AppRouter extends _$AppRouter {
   @override
   List<AutoRoute> get routes => [
         AutoRoute(page: SignInRoute.page),
-        AutoRoute(page: SignUpRoute.page),
+        AutoRoute(page: SignUpRoute.page, initial: true),
         AutoRoute(page: ForgetPasswordRoute.page),
         AutoRoute(page: CheckoutRoute.page),
         AutoRoute(page: ShippingAddressRoute.page),
         AutoRoute(page: PaymentOptionsRoute.page),
-        AutoRoute(page: AddCardRoute.page,initial: true),
+        AutoRoute(page: AddCardRoute.page),
         AutoRoute(
           page: NavigationRoute.page,
           // initial: true,

@@ -3,6 +3,8 @@ class ImageStrings {
 
   // -- Logo
   static const String masterCardLogo = "assets/images/logos/mc_symbol_opt_45_2x.png";
+  static const String facebookLogo = "assets/images/logos/icons8-facebook-48.png";
+  static const String googleLogo = "assets/images/logos/icons8-google-48.png";
 
   // -- Drawings
   static const String inviteFriends = "assets/images/drawings/undraw_conversation_re_c26v.svg";
