@@ -93,6 +93,14 @@ abstract class _$AppRouter extends RootStackRouter {
         child: ShippingAddressScreen(key: args.key),
       );
     },
+    ShippingTypeRoute.name: (routeData) {
+      final args = routeData.argsAs<ShippingTypeRouteArgs>(
+          orElse: () => const ShippingTypeRouteArgs());
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: ShippingTypeScreen(key: args.key),
+      );
+    },
     SignInRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -324,6 +332,35 @@ class ShippingAddressRouteArgs {
   @override
   String toString() {
     return 'ShippingAddressRouteArgs{key: $key}';
+  }
+}
+
+/// generated route for
+/// [ShippingTypeScreen]
+class ShippingTypeRoute extends PageRouteInfo<ShippingTypeRouteArgs> {
+  ShippingTypeRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
+          ShippingTypeRoute.name,
+          args: ShippingTypeRouteArgs(key: key),
+          initialChildren: children,
+        );
+
+  static const String name = 'ShippingTypeRoute';
+
+  static const PageInfo<ShippingTypeRouteArgs> page =
+      PageInfo<ShippingTypeRouteArgs>(name);
+}
+
+class ShippingTypeRouteArgs {
+  const ShippingTypeRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'ShippingTypeRouteArgs{key: $key}';
   }
 }
 

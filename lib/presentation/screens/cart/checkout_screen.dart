@@ -109,6 +109,7 @@ class CheckoutScreen extends StatelessWidget {
                 title: "Standard",
                 subtitle: "Lorem Ipsum is simply",
                 leadingIcon: FontAwesomeIcons.handHoldingHand,
+                onTap: () => context.router.push(ShippingTypeRoute()),
               ),
 
               // Total Price Group

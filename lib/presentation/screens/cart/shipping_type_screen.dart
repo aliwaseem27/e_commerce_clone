@@ -7,39 +7,39 @@ import '../../../utils/constants/app_sizes.dart';
 import 'widgets/shipping_address_tile.dart';
 
 @RoutePage()
-class PaymentOptionsScreen extends StatefulWidget {
-  PaymentOptionsScreen({super.key});
+class ShippingTypeScreen extends StatefulWidget {
+  ShippingTypeScreen({super.key});
 
   @override
-  State<PaymentOptionsScreen> createState() => _PaymentOptionsScreenState();
+  State<ShippingTypeScreen> createState() => _ShippingTypeScreenState();
 }
 
-class _PaymentOptionsScreenState extends State<PaymentOptionsScreen> {
+class _ShippingTypeScreenState extends State<ShippingTypeScreen> {
   final List<Map<String, dynamic>> addresses = [
     {
-      "title": "Cash On Delivery",
+      "title": "Standard",
       "subtitle": "Lorem Ipsum is simply",
-      "leadingIcon": FontAwesomeIcons.handHoldingDollar,
+      "leadingIcon": FontAwesomeIcons.handHoldingMedical,
     },
     {
-      "title": "MasterCard",
+      "title": "Click & Collect",
       "subtitle": "Lorem Ipsum is simply",
-      "leadingIcon": FontAwesomeIcons.ccMastercard,
+      "leadingIcon": FontAwesomeIcons.handPointDown,
     },
     {
-      "title": "Discover",
+      "title": "Same-Day Delivery",
       "subtitle": "Lorem Ipsum is simply",
-      "leadingIcon": FontAwesomeIcons.creditCard,
+      "leadingIcon": FontAwesomeIcons.truck,
     },
   ];
 
-  int selectedPayment = 0;
+  int selectedShippingType = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Payment Method"),
+        title: Text("Choose Shipping"),
         centerTitle: true,
         surfaceTintColor: Colors.transparent,
         scrolledUnderElevation: 0,
@@ -56,7 +56,7 @@ class _PaymentOptionsScreenState extends State<PaymentOptionsScreen> {
                   children: [
                     // Title
                     Text(
-                      "Payment Option",
+                      "Shipping Type",
                       style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
                     ),
                     SizedBox(height: AppSizes.spaceBtwItems),
@@ -71,10 +71,10 @@ class _PaymentOptionsScreenState extends State<PaymentOptionsScreen> {
                           title: addresses[index]["title"]!,
                           subtitle: addresses[index]["subtitle"]!,
                           leadingIcon: addresses[index]["leadingIcon"]!,
-                          selected: selectedPayment == index,
+                          selected: selectedShippingType == index,
                           onTap: () {
                             setState(() {
-                              selectedPayment = index;
+                              selectedShippingType = index;
                             });
                           },
                         );

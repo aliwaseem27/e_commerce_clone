@@ -11,6 +11,7 @@ import '../cart/cart_screen.dart';
 import '../cart/checkout_screen.dart';
 import '../cart/payment_options_screen.dart';
 import '../cart/shipping_address.dart';
+import '../cart/shipping_type_screen.dart';
 import '../chat/chat_screen.dart';
 import '../profile/profile_screen.dart';
 import '../store/home_screen.dart';
@@ -24,17 +25,18 @@ class AppRouter extends _$AppRouter {
   @override
   List<AutoRoute> get routes => [
         AutoRoute(page: SignInRoute.page),
-        AutoRoute(page: SignUpRoute.page, initial: true),
+        AutoRoute(page: SignUpRoute.page),
         AutoRoute(page: ForgetPasswordRoute.page),
         AutoRoute(page: CheckoutRoute.page),
         AutoRoute(page: ShippingAddressRoute.page),
         AutoRoute(page: PaymentOptionsRoute.page),
         AutoRoute(page: AddCardRoute.page),
+        AutoRoute(page: ShippingTypeRoute.page),
         AutoRoute(
           page: NavigationRoute.page,
-          // initial: true,
+          initial: true,
           children: [
-            AutoRoute(page: HomeRoute.page),
+            AutoRoute(page: HomeRoute.page, initial: true),
             AutoRoute(page: CartRoute.page),
             AutoRoute(page: WishlistRoute.page),
             AutoRoute(page: ChatRoute.page),
