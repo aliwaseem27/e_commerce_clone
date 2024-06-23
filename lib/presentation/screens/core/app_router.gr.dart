@@ -65,12 +65,24 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const OTPScreen(),
       );
     },
+    OnBoardingRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const OnBoardingScreen(),
+      );
+    },
     PaymentOptionsRoute.name: (routeData) {
       final args = routeData.argsAs<PaymentOptionsRouteArgs>(
           orElse: () => const PaymentOptionsRouteArgs());
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: PaymentOptionsScreen(key: args.key),
+      );
+    },
+    PrivateChatRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const PrivateChatScreen(),
       );
     },
     ProfileRoute.name: (routeData) {
@@ -250,6 +262,20 @@ class OTPRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [OnBoardingScreen]
+class OnBoardingRoute extends PageRouteInfo<void> {
+  const OnBoardingRoute({List<PageRouteInfo>? children})
+      : super(
+          OnBoardingRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'OnBoardingRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [PaymentOptionsScreen]
 class PaymentOptionsRoute extends PageRouteInfo<PaymentOptionsRouteArgs> {
   PaymentOptionsRoute({
@@ -276,6 +302,20 @@ class PaymentOptionsRouteArgs {
   String toString() {
     return 'PaymentOptionsRouteArgs{key: $key}';
   }
+}
+
+/// generated route for
+/// [PrivateChatScreen]
+class PrivateChatRoute extends PageRouteInfo<void> {
+  const PrivateChatRoute({List<PageRouteInfo>? children})
+      : super(
+          PrivateChatRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'PrivateChatRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

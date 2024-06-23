@@ -13,6 +13,8 @@ import '../cart/payment_options_screen.dart';
 import '../cart/shipping_address.dart';
 import '../cart/shipping_type_screen.dart';
 import '../chat/chat_screen.dart';
+import '../chat/private_chat_screen.dart';
+import '../on_boarding/on_boarding_screen.dart';
 import '../profile/profile_screen.dart';
 import '../store/home_screen.dart';
 import '../wishlist/wishlist_screen.dart';
@@ -32,14 +34,16 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: PaymentOptionsRoute.page),
         AutoRoute(page: AddCardRoute.page),
         AutoRoute(page: ShippingTypeRoute.page),
+        AutoRoute(page: OnBoardingRoute.page, initial: true),
+        AutoRoute(page: PrivateChatRoute.page),
         AutoRoute(
           page: NavigationRoute.page,
-          initial: true,
+          // initial: true,
           children: [
             AutoRoute(page: HomeRoute.page),
             AutoRoute(page: CartRoute.page),
             AutoRoute(page: WishlistRoute.page),
-            AutoRoute(page: ChatRoute.page, initial: true),
+            AutoRoute(page: ChatRoute.page),
             AutoRoute(page: ProfileRoute.page),
           ],
         ),
