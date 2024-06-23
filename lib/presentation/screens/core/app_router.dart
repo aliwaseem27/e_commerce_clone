@@ -36,10 +36,10 @@ class AppRouter extends _$AppRouter {
           page: NavigationRoute.page,
           initial: true,
           children: [
-            AutoRoute(page: HomeRoute.page, initial: true),
+            AutoRoute(page: HomeRoute.page),
             AutoRoute(page: CartRoute.page),
             AutoRoute(page: WishlistRoute.page),
-            AutoRoute(page: ChatRoute.page),
+            AutoRoute(page: ChatRoute.page, initial: true),
             AutoRoute(page: ProfileRoute.page),
           ],
         ),

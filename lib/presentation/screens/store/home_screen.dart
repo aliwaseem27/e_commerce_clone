@@ -8,7 +8,7 @@ import '../../common/widgets/grid_layout_four_elements.dart';
 import '../../common/widgets/section_title.dart';
 import 'widgets/home_screen_categories.dart';
 import 'widgets/home_screen_header.dart';
-import 'widgets/home_search_bar.dart';
+import '../../common/widgets/my_search_bar.dart';
 import 'widgets/invide_friends_code_slider.dart';
 import 'widgets/product_vertical_card.dart';
 import 'widgets/promo_banners_slider.dart';
@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(height: AppSizes.spaceBtwItems),
 
               // Search Bar
-              HomeSearchBar(),
+              MySearchBar(),
               SizedBox(height: AppSizes.spaceBtwItems),
 
               // Promo Banners
