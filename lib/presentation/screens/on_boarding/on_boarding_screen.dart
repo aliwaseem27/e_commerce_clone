@@ -11,7 +11,9 @@ class OnBoardingScreen extends StatelessWidget {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.all(AppSizes.defaultSpace),
-        child: Column(
+        child: SingleChildScrollView(
+          child: Column(
+          ),
         ),
       ),
     );
