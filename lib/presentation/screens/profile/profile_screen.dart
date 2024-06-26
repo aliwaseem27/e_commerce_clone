@@ -1,4 +1,6 @@
 import 'package:auto_route/annotations.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:e_commerce_clone/presentation/screens/core/app_router.dart';
 import 'package:e_commerce_clone/utils/constants/app_colors.dart';
 import 'package:e_commerce_clone/utils/constants/app_sizes.dart';
 import 'package:e_commerce_clone/utils/constants/app_strings.dart';
@@ -61,7 +63,11 @@ class ProfileScreen extends StatelessWidget {
               ProfileListTile(leadingIcon: Icons.person, title: AppStrings.myAccount),
               ProfileListTile(leadingIcon: Icons.credit_card, title: AppStrings.paymentMethod),
               ProfileListTile(leadingIcon: Icons.list_alt_rounded, title: AppStrings.myOrders),
-              ProfileListTile(leadingIcon: Icons.settings, title: AppStrings.settings),
+              ProfileListTile(
+                leadingIcon: Icons.settings,
+                title: AppStrings.settings,
+                onTap: () => context.router.push(const SettingsRoute()),
+              ),
               ProfileListTile(leadingIcon: Icons.headset_mic_outlined, title: AppStrings.helpCenter),
               ProfileListTile(leadingIcon: Icons.privacy_tip, title: AppStrings.privacyPolicy),
               ProfileListTile(leadingIcon: Icons.person_add_alt_1_sharp, title: AppStrings.inviteFriends),
