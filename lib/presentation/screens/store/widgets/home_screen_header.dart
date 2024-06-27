@@ -1,3 +1,5 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:e_commerce_clone/presentation/screens/core/app_router.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -38,7 +40,7 @@ class HomeScreenHeader extends StatelessWidget {
           radius: 16,
           backgroundColor: AppColors.secondaryColor,
           child: IconButton(
-            onPressed: () {},
+            onPressed: () => context.router.push(const NotificationRoute()),
             icon: const Icon(FontAwesomeIcons.solidBell),
             iconSize: 16,
           ),

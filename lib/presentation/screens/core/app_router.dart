@@ -18,6 +18,7 @@ import '../on_boarding/on_boarding_screen.dart';
 import '../profile/profile_screen.dart';
 import '../profile/settings_screen.dart';
 import '../store/home_screen.dart';
+import '../store/notification_screen.dart';
 import '../wishlist/wishlist_screen.dart';
 import 'navigation_screen.dart';
 
@@ -35,9 +36,10 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: PaymentOptionsRoute.page),
         AutoRoute(page: AddCardRoute.page),
         AutoRoute(page: ShippingTypeRoute.page),
-        AutoRoute(page: OnBoardingRoute.page),
+        AutoRoute(page: OnBoardingRoute.page, initial: true),
         AutoRoute(page: PrivateChatRoute.page),
-        AutoRoute(page: SettingsRoute.page, initial: true),
+        AutoRoute(page: SettingsRoute.page),
+        AutoRoute(page: NotificationRoute.page),
         AutoRoute(
           page: NavigationRoute.page,
           // initial: true,

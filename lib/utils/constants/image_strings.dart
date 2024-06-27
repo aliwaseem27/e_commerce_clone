@@ -1,6 +1,12 @@
 class ImageStrings {
   static const String profileImage = "assets/images/me.jpg";
 
+  // -- OnBoarding
+  static const String onBoardingImage1 = "assets/images/drawings/undraw_mobile_pay_re_sjb8.svg";
+  static const String onBoardingImage2 = "assets/images/drawings/undraw_online_shopping_re_k1sv.svg";
+  static const String onBoardingImage3 = "assets/images/drawings/undraw_shopping_app_flsj.svg";
+  static const String onBoardingImage4 = "assets/images/drawings/undraw_travel_together_re_kjf2.svg";
+
   // -- Logo
   static const String masterCardLogo = "assets/images/logos/mc_symbol_opt_45_2x.png";
   static const String facebookLogo = "assets/images/logos/icons8-facebook-48.png";
