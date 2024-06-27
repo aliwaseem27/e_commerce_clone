@@ -1,6 +1,7 @@
 class AppStrings {
   static const String appName = "E-Commerce";
   static const String placeholder = "Lorem Ipsum is simply dummy text printing typesetting industry.";
+  static const String placeholderLong = "Lorem Ipsum is simply dummy text printing typesetting industry. Lorem Ipsum is simply dummy text printing typesetting industry. Lorem Ipsum is simply dummy text printing typesetting industry.";
 
   // On Boarding Screen
   static const String onBoardingTitle1 = "Endless Choices, Easy & Quick Purchases";

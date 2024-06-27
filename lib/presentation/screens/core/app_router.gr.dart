@@ -91,6 +91,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const PrivateChatScreen(),
       );
     },
+    ProductDetailsRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ProductDetailsScreen(),
+      );
+    },
     ProfileRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -340,6 +346,20 @@ class PrivateChatRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'PrivateChatRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ProductDetailsScreen]
+class ProductDetailsRoute extends PageRouteInfo<void> {
+  const ProductDetailsRoute({List<PageRouteInfo>? children})
+      : super(
+          ProductDetailsRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ProductDetailsRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
