@@ -1,6 +1,7 @@
-import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:e_commerce_clone/presentation/screens/core/app_router.dart';
+import 'package:e_commerce_clone/utils/constants/app_colors.dart';
+import 'package:e_commerce_clone/utils/constants/app_sizes.dart';
 import 'package:flutter/material.dart';
 
 @RoutePage()
@@ -20,13 +21,20 @@ class MyOrdersScreen extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             title: Text("My Orders"),
+            centerTitle: true,
             leading: AutoLeadingButton(),
             bottom: TabBar(
               controller: controller,
+              indicatorColor: AppColors.primaryColor,
+              indicatorSize: TabBarIndicatorSize.tab,
+              indicatorWeight: 4,
+              padding: EdgeInsets.symmetric(horizontal: AppSizes.defaultSpace),
+              labelStyle: TextStyle(fontWeight: FontWeight.bold),
+              unselectedLabelColor: AppColors.neutralColor,
               tabs: const [
-                Tab(text: 'Active', icon: Icon(Icons.abc)),
-                Tab(text: 'Completed', icon: Icon(Icons.abc)),
-                Tab(text: 'Cancelled', icon: Icon(Icons.abc)),
+                Tab(text: 'Active'),
+                Tab(text: 'Completed'),
+                Tab(text: 'Cancelled'),
               ],
             ),
           ),
@@ -34,6 +42,5 @@ class MyOrdersScreen extends StatelessWidget {
         );
       },
     );
-    ;
   }
 }
