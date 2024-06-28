@@ -15,10 +15,22 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    ActiveOrdersRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ActiveOrdersTab(),
+      );
+    },
     AddCardRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const AddCardScreen(),
+      );
+    },
+    CancelledOrdersRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CancelledOrdersTab(),
       );
     },
     CartRoute.name: (routeData) {
@@ -41,6 +53,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: CheckoutScreen(key: args.key),
       );
     },
+    CompletedOrdersRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CompletedOrdersTab(),
+      );
+    },
     ForgetPasswordRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -51,6 +69,12 @@ abstract class _$AppRouter extends RootStackRouter {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
         child: const HomeScreen(),
+      );
+    },
+    MyOrdersRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const MyOrdersScreen(),
       );
     },
     NavigationRoute.name: (routeData) {
@@ -153,6 +177,20 @@ abstract class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
+/// [ActiveOrdersTab]
+class ActiveOrdersRoute extends PageRouteInfo<void> {
+  const ActiveOrdersRoute({List<PageRouteInfo>? children})
+      : super(
+          ActiveOrdersRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ActiveOrdersRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [AddCardScreen]
 class AddCardRoute extends PageRouteInfo<void> {
   const AddCardRoute({List<PageRouteInfo>? children})
@@ -162,6 +200,20 @@ class AddCardRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'AddCardRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [CancelledOrdersTab]
+class CancelledOrdersRoute extends PageRouteInfo<void> {
+  const CancelledOrdersRoute({List<PageRouteInfo>? children})
+      : super(
+          CancelledOrdersRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CancelledOrdersRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -224,6 +276,20 @@ class CheckoutRouteArgs {
 }
 
 /// generated route for
+/// [CompletedOrdersTab]
+class CompletedOrdersRoute extends PageRouteInfo<void> {
+  const CompletedOrdersRoute({List<PageRouteInfo>? children})
+      : super(
+          CompletedOrdersRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CompletedOrdersRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
 /// [ForgetPasswordScreen]
 class ForgetPasswordRoute extends PageRouteInfo<void> {
   const ForgetPasswordRoute({List<PageRouteInfo>? children})
@@ -247,6 +313,20 @@ class HomeRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'HomeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [MyOrdersScreen]
+class MyOrdersRoute extends PageRouteInfo<void> {
+  const MyOrdersRoute({List<PageRouteInfo>? children})
+      : super(
+          MyOrdersRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'MyOrdersRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

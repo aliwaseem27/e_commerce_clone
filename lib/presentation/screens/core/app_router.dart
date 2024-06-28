@@ -15,6 +15,10 @@ import '../cart/shipping_type_screen.dart';
 import '../chat/chat_screen.dart';
 import '../chat/private_chat_screen.dart';
 import '../on_boarding/on_boarding_screen.dart';
+import '../profile/my_orders_screen.dart';
+import '../profile/my_orders_tabs/active_orders_tab.dart';
+import '../profile/my_orders_tabs/cancelled_orders_tab.dart';
+import '../profile/my_orders_tabs/completed_orders_tab.dart';
 import '../profile/profile_screen.dart';
 import '../profile/settings_screen.dart';
 import '../store/home_screen.dart';
@@ -41,7 +45,7 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: PrivateChatRoute.page),
         AutoRoute(page: SettingsRoute.page),
         AutoRoute(page: NotificationRoute.page),
-        AutoRoute(page: ProductDetailsRoute.page, initial: true),
+        AutoRoute(page: ProductDetailsRoute.page),
         AutoRoute(
           page: NavigationRoute.page,
           // initial: true,
@@ -51,6 +55,15 @@ class AppRouter extends _$AppRouter {
             AutoRoute(page: WishlistRoute.page),
             AutoRoute(page: ChatRoute.page),
             AutoRoute(page: ProfileRoute.page),
+          ],
+        ),
+        AutoRoute(
+          page: MyOrdersRoute.page,
+          initial: true,
+          children: [
+            AutoRoute(page: ActiveOrdersRoute.page),
+            AutoRoute(page: CancelledOrdersRoute.page),
+            AutoRoute(page: CompletedOrdersRoute.page),
           ],
         ),
       ];
