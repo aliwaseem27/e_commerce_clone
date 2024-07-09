@@ -62,7 +62,12 @@ class ProfileScreen extends StatelessWidget {
               // Profile Tiles
               ProfileListTile(leadingIcon: Icons.person, title: AppStrings.myAccount),
               ProfileListTile(leadingIcon: Icons.credit_card, title: AppStrings.paymentMethod),
-              ProfileListTile(leadingIcon: Icons.list_alt_rounded, title: AppStrings.myOrders),
+              ProfileListTile(
+                  leadingIcon: Icons.list_alt_rounded,
+                  title: AppStrings.myOrders,
+                  onTap: () => context.router.push(
+                        const MyOrdersRoute(),
+                      )),
               ProfileListTile(
                 leadingIcon: Icons.settings,
                 title: AppStrings.settings,
