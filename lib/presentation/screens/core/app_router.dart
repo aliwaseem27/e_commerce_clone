@@ -44,7 +44,7 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: OnBoardingRoute.page),
         AutoRoute(page: PrivateChatRoute.page),
         AutoRoute(page: SettingsRoute.page),
-        AutoRoute(page: NotificationRoute.page),
+        AutoRoute(page: NotificationRoute.page, initial: true),
         AutoRoute(page: ProductDetailsRoute.page),
         AutoRoute(
           page: NavigationRoute.page,
@@ -59,11 +59,10 @@ class AppRouter extends _$AppRouter {
         ),
         AutoRoute(
           page: MyOrdersRoute.page,
-          initial: true,
           children: [
             AutoRoute(page: ActiveOrdersRoute.page),
             AutoRoute(page: CancelledOrdersRoute.page),
-            AutoRoute(page: CompletedOrdersRoute.page, initial: true),
+            AutoRoute(page: CompletedOrdersRoute.page),
           ],
         ),
       ];
