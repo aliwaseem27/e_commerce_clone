@@ -1,5 +1,5 @@
 import 'package:auto_route/annotations.dart';
-import 'package:e_commerce_clone/presentation/screens/profile/widgets/product_tile.dart';
+import 'package:e_commerce_clone/presentation/common/widgets/horizontal_product_tile.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../utils/constants/app_sizes.dart';
@@ -13,7 +13,7 @@ class ActiveOrdersTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<Map<String, String>> products = [
       {
-        "name": "Sport Shoes",
+        "name": "Sport Shoes Sport Shoes ",
         "image": ImageStrings.productImage1,
         "category": "Clothing",
       },
@@ -55,7 +55,7 @@ class ActiveOrdersTab extends StatelessWidget {
               shrinkWrap: true,
               itemCount: products.length,
               itemBuilder: (context, index) {
-                return ProductTile(
+                return HorizontalProductTile(
                   productName: products[index]["name"]!,
                   productImage: products[index]["image"]!,
                   productCategory: products[index]["category"]!,

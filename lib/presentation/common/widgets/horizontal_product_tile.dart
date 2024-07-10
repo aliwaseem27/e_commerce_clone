@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../../utils/constants/app_colors.dart';
-import '../../../../utils/constants/app_sizes.dart';
+import '../../../utils/constants/app_colors.dart';
+import '../../../utils/constants/app_sizes.dart';
 
-class ProductTile extends StatelessWidget {
-  const ProductTile({
+class HorizontalProductTile extends StatelessWidget {
+  const HorizontalProductTile({
     super.key,
     required this.productName,
     required this.productImage,
@@ -29,7 +29,7 @@ class ProductTile extends StatelessWidget {
             children: [
               // Product Image
               Expanded(
-                flex: 3,
+                flex: 2,
                 child: AspectRatio(
                   aspectRatio: 1,
                   child: Container(
@@ -41,7 +41,7 @@ class ProductTile extends StatelessWidget {
 
               // Product Details
               Expanded(
-                flex: 3,
+                flex: 4,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -72,8 +72,6 @@ class ProductTile extends StatelessWidget {
                 ),
               ),
 
-              // Action Button
-              Expanded(flex: 3, child: Container()),
             ],
           ),
           Positioned(
@@ -81,6 +79,7 @@ class ProductTile extends StatelessWidget {
             right: 0,
             child: SizedBox(
               height: 32,
+              width: MediaQuery.of(context).size.width * 0.3,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
