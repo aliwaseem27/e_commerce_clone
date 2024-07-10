@@ -1,5 +1,6 @@
 import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
+import 'package:e_commerce_clone/presentation/common/widgets/horizontal_product_tile.dart';
 import 'package:e_commerce_clone/presentation/screens/core/app_router.dart';
 import 'package:e_commerce_clone/utils/constants/image_strings.dart';
 import 'package:flutter/cupertino.dart';
@@ -108,7 +109,7 @@ class _CartScreenState extends State<CartScreen> {
                             ),
                           ],
                         ),
-                        child: HorizontalProductCard(
+                        child: HorizontalProductTile(
                           productName: products[index]["name"]!,
                           productImage: products[index]["image"]!,
                           productCategory: products[index]["category"]!,

@@ -59,6 +59,20 @@ class ActiveOrdersTab extends StatelessWidget {
                   productName: products[index]["name"]!,
                   productImage: products[index]["image"]!,
                   productCategory: products[index]["category"]!,
+                  actionWidget: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(AppSizes.borderRadiusSm),
+                      ),
+                    ),
+                    child: FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        "Track Order",
+                      ),
+                    ),
+                    onPressed: () {},
+                  ),
                 );
               },
               separatorBuilder: (context, index) {

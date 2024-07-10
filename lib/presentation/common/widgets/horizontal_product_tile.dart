@@ -9,11 +9,13 @@ class HorizontalProductTile extends StatelessWidget {
     required this.productName,
     required this.productImage,
     required this.productCategory,
+    this.actionWidget,
   });
 
   final String productName;
   final String productImage;
   final String productCategory;
+  final Widget? actionWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +73,6 @@ class HorizontalProductTile extends StatelessWidget {
                   ],
                 ),
               ),
-
             ],
           ),
           Positioned(
@@ -80,20 +81,7 @@ class HorizontalProductTile extends StatelessWidget {
             child: SizedBox(
               height: 32,
               width: MediaQuery.of(context).size.width * 0.3,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(AppSizes.borderRadiusSm),
-                  ),
-                ),
-                child: FittedBox(
-                  fit: BoxFit.scaleDown,
-                  child: Text(
-                    "Track Order",
-                  ),
-                ),
-                onPressed: () {},
-              ),
+              child: actionWidget ?? const SizedBox(),
             ),
           ),
         ],
