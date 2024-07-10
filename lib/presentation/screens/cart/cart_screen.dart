@@ -8,10 +8,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
+import '../../../utils/constants/app_colors.dart';
 import '../../../utils/constants/app_sizes.dart';
 import 'widgets/delete_product_slider_action.dart';
 import 'widgets/horizontal_product_card.dart';
 import 'widgets/promo_code_input_field.dart';
+import 'widgets/quantity_controller_button.dart';
 import 'widgets/total_price_group.dart';
 
 @RoutePage()
@@ -25,7 +27,7 @@ class CartScreen extends StatefulWidget {
 class _CartScreenState extends State<CartScreen> {
   final List<Map<String, String>> products = [
     {
-      "name": "Sport Shoes",
+      "name": "Sport Shoes Sport Shoes Sport ",
       "image": ImageStrings.productImage1,
       "category": "Clothing",
     },
@@ -113,6 +115,10 @@ class _CartScreenState extends State<CartScreen> {
                           productName: products[index]["name"]!,
                           productImage: products[index]["image"]!,
                           productCategory: products[index]["category"]!,
+                          actionWidget: SizedBox(
+                            height: 32,
+                            child: QuantityControllerButton(),
+                          ),
                         ),
                       );
                     },

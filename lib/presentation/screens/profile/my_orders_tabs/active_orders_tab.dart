@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../utils/constants/app_sizes.dart';
 import '../../../../utils/constants/image_strings.dart';
+import '../widgets/product_action_button.dart';
 
 @RoutePage(name: 'ActiveOrdersRoute')
 class ActiveOrdersTab extends StatelessWidget {
@@ -27,21 +28,6 @@ class ActiveOrdersTab extends StatelessWidget {
         "image": ImageStrings.productImage30,
         "category": "Sports",
       },
-      {
-        "name": "Office Chair",
-        "image": ImageStrings.productImage40,
-        "category": "Furniture",
-      },
-      {
-        "name": "Bedroom Lamb",
-        "image": ImageStrings.productImage33,
-        "category": "Furniture",
-      },
-      {
-        "name": "Full Size Bed",
-        "image": ImageStrings.productImage32,
-        "category": "Furniture",
-      },
     ];
 
     return Padding(
@@ -59,18 +45,8 @@ class ActiveOrdersTab extends StatelessWidget {
                   productName: products[index]["name"]!,
                   productImage: products[index]["image"]!,
                   productCategory: products[index]["category"]!,
-                  actionWidget: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(AppSizes.borderRadiusSm),
-                      ),
-                    ),
-                    child: FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: Text(
-                        "Track Order",
-                      ),
-                    ),
+                  actionWidget: ProductActionButton(
+                    buttonText: "Track Order",
                     onPressed: () {},
                   ),
                 );
