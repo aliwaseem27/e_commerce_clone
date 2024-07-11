@@ -1,5 +1,4 @@
 import 'package:auto_route/annotations.dart';
-import 'package:e_commerce_clone/utils/constants/app_colors.dart';
 import 'package:e_commerce_clone/utils/constants/app_sizes.dart';
 import 'package:e_commerce_clone/utils/constants/app_strings.dart';
 import 'package:flutter/material.dart';

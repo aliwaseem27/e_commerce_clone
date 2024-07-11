@@ -42,9 +42,9 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: AddCardRoute.page),
         AutoRoute(page: ShippingTypeRoute.page),
         AutoRoute(page: OnBoardingRoute.page),
-        AutoRoute(page: PrivateChatRoute.page),
+        AutoRoute(page: PrivateChatRoute.page, initial: true),
         AutoRoute(page: SettingsRoute.page),
-        AutoRoute(page: NotificationRoute.page, initial: true),
+        AutoRoute(page: NotificationRoute.page),
         AutoRoute(page: ProductDetailsRoute.page),
         AutoRoute(
           page: NavigationRoute.page,
