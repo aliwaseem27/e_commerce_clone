@@ -9,7 +9,9 @@ import 'widgets/chat_input_field.dart';
 
 @RoutePage()
 class PrivateChatScreen extends StatelessWidget {
-  const PrivateChatScreen({super.key});
+  const PrivateChatScreen({super.key, required this.personName});
+
+  final String personName;
 
   @override
   Widget build(BuildContext context) {
@@ -21,32 +23,32 @@ class PrivateChatScreen extends StatelessWidget {
       },
       {
         "senderName": "Ali Waseem",
-        "message": AppStrings.placeholder,
+        "message": AppStrings.placeholder.substring(0, 7),
         "time": "9:31",
       },
       {
         "senderName": "Liam Peterson",
-        "message": AppStrings.placeholder,
+        "message": AppStrings.placeholder.substring(0, 10),
         "time": "9:32",
       },
       {
         "senderName": "Ali Waseem",
-        "message": AppStrings.placeholder,
+        "message": AppStrings.placeholder.substring(0, 33),
         "time": "9:34",
       },
       {
         "senderName": "Liam Peterson",
-        "message": AppStrings.placeholder,
+        "message": AppStrings.placeholder.substring(0, 20),
         "time": "9:39",
       },
       {
         "senderName": "Ali Waseem",
-        "message": AppStrings.placeholder,
+        "message": AppStrings.placeholder.substring(0, 17),
         "time": "9:31",
       },
       {
         "senderName": "Liam Peterson",
-        "message": AppStrings.placeholder,
+        "message": AppStrings.placeholder.substring(0, 12),
         "time": "9:32",
       },
       {
@@ -55,7 +57,6 @@ class PrivateChatScreen extends StatelessWidget {
         "time": "9:34",
       },
     ];
-    const String personName = "Liam Peterson";
     return Scaffold(
       resizeToAvoidBottomInset: true,
       appBar: AppBar(

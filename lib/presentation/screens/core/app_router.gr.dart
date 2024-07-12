@@ -110,9 +110,13 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     PrivateChatRoute.name: (routeData) {
+      final args = routeData.argsAs<PrivateChatRouteArgs>();
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const PrivateChatScreen(),
+        child: PrivateChatScreen(
+          key: args.key,
+          personName: args.personName,
+        ),
       );
     },
     ProductDetailsRoute.name: (routeData) {
@@ -418,16 +422,40 @@ class PaymentOptionsRouteArgs {
 
 /// generated route for
 /// [PrivateChatScreen]
-class PrivateChatRoute extends PageRouteInfo<void> {
-  const PrivateChatRoute({List<PageRouteInfo>? children})
-      : super(
+class PrivateChatRoute extends PageRouteInfo<PrivateChatRouteArgs> {
+  PrivateChatRoute({
+    Key? key,
+    required String personName,
+    List<PageRouteInfo>? children,
+  }) : super(
           PrivateChatRoute.name,
+          args: PrivateChatRouteArgs(
+            key: key,
+            personName: personName,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'PrivateChatRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<PrivateChatRouteArgs> page =
+      PageInfo<PrivateChatRouteArgs>(name);
+}
+
+class PrivateChatRouteArgs {
+  const PrivateChatRouteArgs({
+    this.key,
+    required this.personName,
+  });
+
+  final Key? key;
+
+  final String personName;
+
+  @override
+  String toString() {
+    return 'PrivateChatRouteArgs{key: $key, personName: $personName}';
+  }
 }
 
 /// generated route for

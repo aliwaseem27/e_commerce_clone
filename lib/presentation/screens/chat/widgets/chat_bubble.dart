@@ -6,7 +6,8 @@ import '../../../../utils/constants/app_sizes.dart';
 class ChatBubble extends StatelessWidget {
   const ChatBubble({
     super.key,
-    required this.personName, required this.message,
+    required this.personName,
+    required this.message,
   });
 
   final Map<String, dynamic> message;
@@ -15,9 +16,7 @@ class ChatBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: message["senderName"] == personName
-          ? MainAxisAlignment.start
-          : MainAxisAlignment.end,
+      mainAxisAlignment: message["senderName"] == personName ? MainAxisAlignment.start : MainAxisAlignment.end,
       children: [
         Container(
           constraints: BoxConstraints(
@@ -25,52 +24,39 @@ class ChatBubble extends StatelessWidget {
           ),
           padding: const EdgeInsets.all(AppSizes.sm),
           decoration: BoxDecoration(
-              color: message["senderName"] == personName
-                  ? AppColors.secondaryColor
-                  : AppColors.primaryColor,
+              color: message["senderName"] == personName ? AppColors.secondaryColor : AppColors.primaryColor,
               borderRadius: BorderRadius.circular(AppSizes.borderRadiusLg)),
-          child: Align(
-            alignment: message["senderName"] == personName
-                ? Alignment.centerRight
-                : Alignment.centerLeft,
-            child: Stack(
-              children: [
-                Text(
-                  message["message"],
-                  style: TextStyle(
-                    color: message["senderName"] == personName ? Colors.black : Colors.white,
-                  ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text(
+                message["message"],
+                style: TextStyle(
+                  color: message["senderName"] == personName ? Colors.black : Colors.white,
                 ),
-                Positioned(
-                  bottom: 0,
-                  right: 0,
-                  child: Row(
-                    // mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        message["time"],
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodySmall
-                            ?.apply(color: AppColors.neutralColor),
-                      ),
-                      SizedBox(
-                        width: AppSizes.xs,
-                      ),
-                      // Sent Mark
-                      message["senderName"] != personName
-                          ? Icon(
-                        Icons.done_all,
-                        size: 16,
-                        color: AppColors.neutralColor,
-                      )
-                          : SizedBox(),
-                    ],
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text(
+                    message["time"],
+                    style: Theme.of(context).textTheme.bodySmall?.apply(color: AppColors.neutralColor),
                   ),
-                ),
-              ],
-            ),
+                  SizedBox(
+                    width: AppSizes.xs,
+                  ),
+                  // Sent Mark
+                  message["senderName"] != personName
+                      ? Icon(
+                          Icons.done_all,
+                          size: 16,
+                          color: AppColors.neutralColor,
+                        )
+                      : SizedBox(),
+                ],
+              ),
+            ],
           ),
         ),
       ],
