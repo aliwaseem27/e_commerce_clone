@@ -7,6 +7,7 @@ class AppTheme {
   AppTheme._();
 
   static ThemeData lightTheme = ThemeData(
+    scaffoldBackgroundColor: Colors.white,
     useMaterial3: true,
     fontFamily: 'Lato',
     inputDecorationTheme: AppTextFieldFormTheme.lightInputDecorationTheme,
