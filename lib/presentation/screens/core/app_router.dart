@@ -21,6 +21,7 @@ import '../profile/my_orders_tabs/cancelled_orders_tab.dart';
 import '../profile/my_orders_tabs/completed_orders_tab.dart';
 import '../profile/profile_screen.dart';
 import '../profile/settings_screen.dart';
+import '../search/search_screen.dart';
 import '../store/home_screen.dart';
 import '../store/notification_screen.dart';
 import '../store/product_details_screen.dart';
@@ -46,9 +47,10 @@ class AppRouter extends _$AppRouter {
         AutoRoute(page: SettingsRoute.page),
         AutoRoute(page: NotificationRoute.page),
         AutoRoute(page: ProductDetailsRoute.page),
+        AutoRoute(page: SearchRoute.page, initial: true),
         AutoRoute(
           page: NavigationRoute.page,
-          initial: true,
+          // initial: true,
           children: [
             AutoRoute(page: HomeRoute.page),
             AutoRoute(page: CartRoute.page),
