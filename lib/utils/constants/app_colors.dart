@@ -8,5 +8,4 @@ class AppColors {
   static const Color neutralColor = Color(0xFF9D9D9D);
   static const Color neutralDarkColor = Color(0xFF242424);
   static const Color warning = Colors.red;
-  static const Color real = Colors.red;
 }
